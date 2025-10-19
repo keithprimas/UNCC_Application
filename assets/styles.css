@@ -75,7 +75,7 @@ h3{ font-size:.95rem; color:#899064; margin-top:0.3rem; }
   width:215px;
   height:215px;
   border-radius:50%;
-  border:10px solid #007377;
+  border:10px solid #005035;
   object-fit:cover;
   position:absolute;
   top:50%;
@@ -104,7 +104,7 @@ h3{ font-size:.95rem; color:#899064; margin-top:0.3rem; }
   width:145px;
   height:145px;
   border-radius:50%;
-  border:10px solid #007377;
+  border:10px solid #a49665;
   object-fit:cover;
   cursor:pointer;
   transition: transform .25s ease, box-shadow .25s ease;
