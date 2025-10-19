@@ -159,5 +159,34 @@
   // Also run on DOMContentLoaded as a fallback (if images cache quickly)
   document.addEventListener('DOMContentLoaded', () => {
     setTimeout(positionOrbit, 20);
+    initAlmaMaterCarousel();
   });
+
+  // Alma Mater Carousel
+  function initAlmaMaterCarousel() {
+    const almaMaterLines = [
+      "Hail University! To you we sing our praise.",
+      "May Charlotte's light dispel the night, illumine all our days.",
+      "In Carolina’s crown the brightest gem we see.",
+      "Without your power our finest hour would hold no victory.",
+      "So let us love your life and cherish your great name.",
+      "To aid your cause, up hold your laws, and your enduring fame."
+    ];
+
+    const carouselText = document.querySelector('.carousel-text');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      carouselText.classList.remove('active');
+      
+      setTimeout(() => {
+        carouselText.textContent = almaMaterLines[currentIndex];
+        carouselText.classList.add('active');
+        currentIndex = (currentIndex + 1) % almaMaterLines.length;
+      }, 500);
+    }
+
+    updateCarousel(); // Initial display
+    setInterval(updateCarousel, 5000); // Change every 5 seconds
+  }
 })();
